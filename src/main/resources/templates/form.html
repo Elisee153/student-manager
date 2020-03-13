@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">Ajouter Etudiant</h1>
+            <form method="post" th:object="${etudiant}" th:action="@{/save}">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6">
+                        <input class="form-control" placeholder="Nom" th:field="*{nom}"><br>
+                        <input class="form-control"  placeholder="Prenom" th:field="*{prenom}"><br>
+                        <input class="form-control"  placeholder="Matricule" th:field="*{matricule}"><br>
+                        <input class="form-control"  placeholder="Promotion" th:field="*{promotion}"><br>
+                        <input class="btn btn-primary" type="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
